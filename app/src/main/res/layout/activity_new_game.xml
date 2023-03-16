@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewGame">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="-67dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/score_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/dice_off_score_board"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/wins_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:paddingEnd="15dp"
+            android:text="@string/wins_count"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/wins_board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/score_card"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="-6dp"
+            android:layout_marginEnd="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/human_win_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="10dp"
+                android:text="@string/user"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/pc_win_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/pc"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/winScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/score_board"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="-6dp"
+            android:layout_marginEnd="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/human_wins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:padding="10dp"
+                android:text="0"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/pc_wins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="0"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/score_board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/score_card"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-6dp"
+            android:layout_marginEnd="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/human_score_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/user"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/pc_score_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/pc"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/score_board"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-6dp"
+            android:layout_marginEnd="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/human_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="0"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/pc_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:padding="10dp"
+                android:text="0"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mainButtons"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_below="@id/scores"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/score_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Score" />
+
+            <Button
+                android:id="@+id/throw_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Throw" />
+
+            <Button
+                android:id="@+id/re_roll_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Re-roll" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/current_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mainButtons"
+            android:layout_marginTop="1dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/current_user_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:padding="10dp"
+                android:text="current\n score"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/current_pc_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="current\n score"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/current_score"
+            android:columnCount="2"
+            android:rowCount="5"
+            >
+
+            <!--____________________ USER DICE____________________-->
+            <ImageButton
+                android:id="@+id/user_die_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:background="@color/Moody_light"
+                android:layout_margin="2dp"
+                android:contentDescription="@string/dice_image"
+                android:src="@drawable/die_1" />
+
+            <ImageButton
+                android:id="@+id/user_die_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:background="@color/Moody_light"
+                android:layout_margin="2dp"
+                android:contentDescription="@string/dice_image"
+                android:src="@drawable/die_2" />
+
+            <ImageButton
+                android:id="@+id/user_die_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:background="@color/Moody_light"
+                android:layout_margin="2dp"
+                android:contentDescription="@string/dice_image"
+                android:src="@drawable/die_3" />
+
+            <ImageButton
+                android:id="@+id/user_die_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:background="@color/Moody_light"
+                android:layout_margin="2dp"
+                android:contentDescription="@string/dice_image"
+                android:src="@drawable/die_4" />
+
+            <ImageButton
+                android:id="@+id/user_die_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:background="@color/Moody_light"
+                android:layout_margin="2dp"
+                android:contentDescription="@string/dice_image"
+                android:src="@drawable/die_5" />
+
+
+
+            <!--____________________ PC DICE____________________-->
+
+            <ImageButton
+                android:id="@+id/pc_die_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:background="@color/Moody_light"
+                android:layout_margin="2dp"
+                android:contentDescription="@string/dice_image"
+                android:src="@drawable/die_1" />
+
+            <ImageButton
+                android:id="@+id/pc_die_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:background="@color/Moody_light"
+                android:layout_margin="2dp"
+                android:contentDescription="@string/dice_image"
+                android:src="@drawable/die_2" />
+
+            <ImageButton
+                android:id="@+id/pc_die_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:background="@color/Moody_light"
+                android:layout_margin="2dp"
+                android:contentDescription="@string/dice_image"
+                android:src="@drawable/die_3" />
+
+            <ImageButton
+                android:id="@+id/pc_die_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:background="@color/Moody_light"
+                android:layout_margin="2dp"
+                android:contentDescription="@string/dice_image"
+                android:src="@drawable/die_4" />
+
+            <ImageButton
+                android:id="@+id/pc_die_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:background="@color/Moody_light"
+                android:layout_margin="2dp"
+                android:contentDescription="@string/dice_image"
+                android:src="@drawable/die_5" />
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">W1912859 Dice Game</string>
+    <string name="about">About</string>
+    <string name="new_game">New Game</string>
+    <string name="about_message">
+        Student Name: Devmal Wijesinghe\nStudent ID: W1912859/20210220\nPlagiarism Declaration: I confirm that I understand what plagiarism is and have read and
+        understood the section on Assessment Offences in the Essential
+        Information for Students. The work that I have submitted is
+        entirely my own. Any work from other authors is duly referenced
+        and acknowledged.
+    </string>
+    <string name="welcome_to_dice_off">Welcome to Dice-off</string>
+    <string name="user_0">User: 0</string>
+    <string name="computer_0">Computer: 0</string>
+    <string name="pc">PC</string>
+    <string name="user">User</string>
+    <string name="dice_off_score_board">Dice-Off Score Board</string>
+    <string name="dice_image">dice image</string>
+    <string name="score">Score</string>
+    <string name="wins_count">Wins Count</string>
+</resources>
