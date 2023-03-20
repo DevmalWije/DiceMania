@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">W1912859 Dice Game</string>
+    <string name="app_name">Dice Game</string>
+    <string name="empty_string" />
     <string name="about">About</string>
     <string name="new_game">New Game</string>
     <string name="about_message">
@@ -14,8 +15,11 @@
     <string name="computer_0">Computer: 0</string>
     <string name="pc">PC</string>
     <string name="user">User</string>
-    <string name="dice_off_score_board">Dice-Off Score Board</string>
+    <string name="dice_off_score_board">Total Score</string>
     <string name="dice_image">dice image</string>
     <string name="score">Score</string>
     <string name="wins_count">Wins Count</string>
+    <string name="target_score">Target Score</string>
+    <string name="enter_target_score">Enter Target Score</string>
+    <string name="gameoutcomeicon">GameOutComeIcon</string>
 </resources>

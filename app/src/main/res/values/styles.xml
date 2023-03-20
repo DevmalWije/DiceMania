@@ -18,8 +18,6 @@
     </style>
 
 
-
-
     <!--    common styling for button elements-->
     <style name="buttonStyle" parent="Widget.AppCompat.Button">
         <item name="android:backgroundTint">@color/purple_200</item>
